@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Account</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Link to DataTables CSS and JS files -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/list.css" />
+
+</head>
+
+<body class="container">
+    <table id="myDataTable">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>mail</th>
+                <th>last_name</th>
+                <th>first_name</th>
+                <th>password</th>
+                <th>phone</th>
+                <th>dob</th>
+                <th>avatar</th>
+                <th>role</th>
+                <th>status</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody style="text-align: left !important">
+            <tr>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+                <td>
+                    <a href="" class="btn btn-info edit">Sửa</a>
+                    <button onclick="confirm('Bạn đã chắc xoá chưa?')" type="submit"
+                        class="btn btn-danger delete">Xóa</button>
+                </td>
+
+
+            </tr>
+        </tbody>
+
+    </table>
+
+</body>
+
+<script>
+
+    $(document).ready(function () {
+        $('#myDataTable').DataTable();
+    });
+
+</script>
+
+</html>

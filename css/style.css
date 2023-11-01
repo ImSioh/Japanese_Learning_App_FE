@@ -1,0 +1,66 @@
+body{
+    background : url("https://forbes.vn/wp-content/uploads/2022/09/0x0-2022-09-26T152306.327.jpg");
+    background-size: cover;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+.box{
+    padding: 50px;
+    height: auto;
+    width: 800px;
+    background:transparent;
+    border: 2px solid white  ;
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    font-size: xx-large;
+    color: white;
+    text-align: center;
+}
+.form-group{
+    color: white;
+    margin: 10px 10px;
+    border-bottom:2px solid white ;
+}
+.gender{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 10px;
+    font-size: larger;
+}
+.form-group input{
+    width: 100%;
+    height: 30px;
+    background: transparent;
+    border: none;
+    font-size: large;
+}
+input:focus{
+    background-color: inherit;
+    font-size: large;
+}
+button {
+    width: 40%;
+    height: 50px;
+    border-radius: 40px !important;
+    background-color: aliceblue;
+    border: none;
+    cursor: pointer;
+    font-size: large;
+    font-weight: 600 ;
+    margin: 20px 0 !important;
+}
+::placeholder{
+    color: white;
+    font-size: large;
+}

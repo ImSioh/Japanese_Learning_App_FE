@@ -1,0 +1,38 @@
+body{
+    padding: 30px 0;
+    background : url("https://anbvietnam.vn/wp-content/uploads/2021/06/nui-phu-si-1.jpg");
+    background-size: cover;
+}
+table{
+    width: 100%;
+    text-align: left;
+}
+table, th, td {
+    height: 50px;
+    padding: 50px 0;
+  }
+  th{
+    background-color: rgb(186, 7, 7) !important;
+    color: white;
+  }
+  .edit{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 20px;
+  }
+  .delete{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e3690d;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
