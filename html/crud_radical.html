@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD Radical</title>
+
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        button {
+            padding: 5px 10px;
+        }
+
+        .add-form {
+            display: table-row;
+        }
+
+        .add-form label, .add-form input, .add-form button {
+            display: table-cell;
+            margin-right: 10px;
+        }
+
+        .add-form button {
+            margin-right: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>CRUD Radical</h1>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Number Order</th>
+            <th>Radical Category ID</th>
+            <th>Radical</th>
+            <th>Name</th>
+            <th>Meaning</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+
+
+        <tr class="add-form">
+            <td><input type="text" id="id" name="id" required></td>
+            <td><input type="text" id="number-order" name="number-order" required></td>
+            <td><input type="number" id="radical-category-id" class="form-control " name="phone" required></td>
+            <td><input type="text" id="radical" name="radical" required></td>
+            <td><input type="text" id="name" name="name" required></td>
+            <td><input type="text" id="meaning" name="meaning" required></td>
+            <td><input type="text" id="status" name="status" required></td>
+            <td><button type="button" onclick="addData()">Add</button></td>
+        </tr>
+    </table>
+
+    <script>
+        function addData() {
+            // Lấy giá trị từ form
+            var id = document.getElementById("id").value;
+            var numberOrder = document.getElementById("number-order").value;
+            var radicalCategoryId = document.getElementById("radical-category-id").value;
+            var radical = document.getElementById("radical").value;
+            var name = document.getElementById("name").value;
+            var meaning = document.getElementById("meaning").value;
+            var status = document.getElementById("status").value;
+
+            // Tạo một dòng mới trong bảng
+            var table = document.querySelector("table");
+            var row = table.insertRow(table.rows.length - 1);
+
+            // Thêm các ô dữ liệu
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            var cell4 = row.insertCell(3);
+            var cell5 = row.insertCell(4);
+            var cell6 = row.insertCell(5);
+            var cell7 = row.insertCell(6);
+            var cell8 = row.insertCell(7);
+
+            cell1.innerHTML = id;
+            cell2.innerHTML = numberOrder;
+            cell3.innerHTML = radicalCategoryId;
+            cell4.innerHTML = radical;
+            cell5.innerHTML = name;
+            cell6.innerHTML = meaning;
+            cell7.innerHTML = status;
+            cell8.innerHTML = '<button onclick="updateData(this)">Update</button> <button onclick="deleteData(this)">Delete</button>';
+
+            // Xóa nội dung của các trường input sau khi thêm
+            document.getElementById("id").value = "";
+            document.getElementById("number-order").value = "";
+            document.getElementById("radical-category-id").value = "";
+            document.getElementById("radical").value = "";
+            document.getElementById("name").value = "";
+            document.getElementById("meaning").value = "";
+            document.getElementById("status").value = "";
+        }
+
+        function updateData(button) {
+            var row = button.parentNode.parentNode;
+            var cells = row.getElementsByTagName("td");
+
+            // Đổ dữ liệu từ bảng vào form
+            document.getElementById("id").value = cells[0].innerHTML;
+            document.getElementById("number-order").value = cells[1].innerHTML;
+            document.getElementById("radical-category-id").value = cells[2].innerHTML;
+            document.getElementById("radical").value = cells[3].innerHTML;
+            document.getElementById("name").value = cells[4].innerHTML;
+            document.getElementById("meaning").value = cells[5].innerHTML;
+            document.getElementById("status").value = cells[6].innerHTML;
+
+            // Xóa dòng cũ
+            row.parentNode.removeChild(row);
+        }
+
+        function deleteData(button) {
+            var row = button.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+        }
+    </script>
+</body>
+</html>
